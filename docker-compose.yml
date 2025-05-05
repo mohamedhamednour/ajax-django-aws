@@ -1,0 +1,36 @@
+version: "3.3"
+
+services:
+  db:
+    image: postgres:13
+    container_name: digis_postgres_database
+    restart: always
+    env_file:
+      - backend/.docker.env
+    volumes:
+      - ./postgres_db:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+  web:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: digis
+    container_name: digis_web
+    restart: on-failure
+    command: /start.sh
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    links:
+      - db
+    depends_on:
+      - db
+    env_file: backend/.docker.env
+
+
+volumes:
+  letsencrypt:
+  postgres_db:

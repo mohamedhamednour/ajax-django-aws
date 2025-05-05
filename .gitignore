@@ -1,0 +1,69 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pdb
+*.log
+
+# Django
+*.sqlite3
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Django Stuff
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+*.db
+
+# Environment variables
+.env
+*.env
+*.docker.env
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Static and Media files
+/static/
+/media/
+
+# Coverage
+.coverage
+nosetests.xml
+coverage.xml
+*.cover
+*.hypothesis/
+
+# MySQL
+*.sql
+*.sql.gz
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Sphinx documentation
+docs/_build/
+
+# Unit test / coverage reports
+*.cover
+*.hypothesis/
+
+postgres_db
